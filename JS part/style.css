@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-image:url('imgDay.jpg');
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#dark-mode-toggle {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+
+body.dark-mode {
+    background-image:url('imgNight.jpg');
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-image: linear-gradient(90deg, rgba(55,124,122, 0.6), rgba(80,168,234, 0.6));
+    position: fixed;
+    width: 100vw;
+    z-index: 60;
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.dark-mode .nav {
+    background-color: rgba(0,0,0,0.8);
+    background-image: none;
+}
+
+.logo {
+    font-family: 'Arizonia', cursive;
+    font-size: 100px;
+    margin-left: 20px;
+    color: white;
+}
+
+.dark-mode .logo {
+    color: rgb(102, 98, 148);
+}
+
+
+.cloud-tags {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Saira Condensed', sans-serif;
+    width: 40vw;
+    height: 120px;
+}
+
+
+.tags {
+    color: white;
+}
+
+.tagElement:hover, .showAllTags:hover {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50px;
+    color: rgb(55,124,122);
+
+}
+
+.dark-mode .tagElement:hover, .dark-mode .showAllTags:hover {
+    background-color: rgb(102, 98, 148);
+    padding: 10px;
+    border-radius: 50px;
+    color: rgb(20, 40, 39);
+
+}
+
+
+.dark-mode .cloud-tags {
+    color: rgb(134, 131, 175);
+}
+
+
+.counter {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.description {
+  padding-top: 250px;
+}
+
+.desc-text {
+    background-image: linear-gradient(90deg, rgba(55,124,122, 0.8), rgba(80,168,234, 0.6));
+    border-radius: 22px;
+    width: 900px;
+    height: 360px;
+    padding: 40px;
+    margin: 30px auto;
+}
+
+.dark-mode .desc-text {
+    background-color: rgba(0,0,0,0.8);
+    background-image: none;
+}
+
+.description p {
+    /* font-family: 'Arizonia', cursive; */
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Saira Condensed', sans-serif; */
+    font-size: 22px;
+    width: 800px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.dark-mode .description p {
+    color: rgb(134, 131, 175);
+}
+
+.add {
+    margin-top: 80px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(80,168,234);
+    color: white;
+    font-size: 50px;
+    font-family: 'Poiret One', cursive;
+    cursor: pointer;
+}
+
+.plus:hover{
+    background-color: white;
+    color: rgb(80,168,234);
+}
+
+.dark-mode .plus {
+    color: rgb(102, 98, 148);
+    background-color: rgb(2, 44, 77);
+}
+
+.dark-mode .plus:hover {
+    background-color: rgb(102, 98, 148);
+    color: rgb(20, 40, 39);
+}
+
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 630px;
+    border: none;
+    border-radius: 22px;
+    background-color:  rgb(80,168,234);;
+    align-items: center;
+}
+
+.dark-mode .popup-content {
+    background-color: rgb(2, 44, 77);
+}
+
+#popup {
+    z-index: 100;
+}
+
+#title, #content, #author, #tag, #addCardButton {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 22px;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.dark-mode #title, .dark-mode #content, .dark-mode #author, .dark-mode #addCardButton {
+    color: rgb(102, 98, 148);
+    background-color: rgb(37, 67, 91);
+}
+
+.dark-mode select {
+    background-color: rgb(88, 75, 101);
+}
+
+#title {
+    margin-top: 60px;
+}
+
+#addCardButton {
+    border: 0.5px solid gray;
+    cursor: pointer;
+    color: white;
+    border-radius: 50px;
+    background-color: transparent;
+    height: 50px;
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+#addCardButton:hover {
+    background-color: rgba(55,124,122, 0.6)
+}
+
+.dark-mode #addCardButton {
+    color: rgb(102, 98, 148);
+}
+
+.dark-mode #addCardButton:hover {
+    background-color: rgba(55,124,122, 0.6)
+}
+
+.close {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.dark-mode .close {
+    color: rgb(102, 98, 148);
+}
+
+
+#content {
+    height: 180px;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Saira Condensed', sans-serif;
+    margin: 0 100px;
+    padding-bottom: 150px;
+    overflow: visible;
+}
+
+.imgContainer {
+    background-size: cover; 
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 22px 22px 0 0;
+    position: relative;
+}
+
+.imgContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 22px 22px 0 0;
+  }
+  
+  .dark-mode .imgContainer::before {
+    background-color: rgba(105, 102, 164, 0.7);
+  }
+
+.info {
+    position: relative;
+    background-color: white;
+    border-radius: 22px;
+    width: 200px;
+    height: 355px;
+    margin: 60px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.dark-mode .info {
+    background-color: rgb(2, 44, 77);
+}
+
+.info:hover {
+    transform: scale(1.7);
+    z-index: 50;
+}
+
+.cards p {
+    color: black;
+    margin: 10px;
+    line-height: 1.2;
+}
+
+
+.info .title {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.dark-mode .info .title {
+    color: rgb(134, 131, 175);
+}
+
+.info .contentText {
+    font-size: 10px;
+}
+
+.dark-mode .info .contentText{
+    color: rgb(134, 131, 175);
+}
+
+.info .contentAuthor {
+    font-size: 10px;
+}
+
+.dark-mode .info .contentAuthor {
+    color: rgb(134, 131, 175);
+}
+
+.info .hashtag {
+    font-size: 8px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    margin: 0;
+}
+
+.dark-mode .info .hashtag {
+    color: rgb(134, 131, 175);
+}
+
+#message {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    font-size: 32px;
+    margin-top: 50px;
+}
