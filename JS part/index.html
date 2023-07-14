@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind habbits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poiret+One&family=Saira+Condensed:wght@200&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="nav">
+        <div class="logo">Mind habits</div>
+        <div class="tags">
+            <div class="cloud-tags"></div>
+        </div>
+        <div class="buttons">
+            <img id="dark-mode-toggle" src="imgMoon.png" alt="Dark Mode Icon" onclick="toggleDarkMode()">
+        </div>
+    </section>
+
+    <section class="description">
+        <div class="desc-text">
+            <p>
+                We believe in the importance of positive mental habits. Small changes can have a profound impact, influencing almost every aspect of our lives. They can be priceless and transformative, changing your life in ways you never thought possible.
+            </p>
+            <p>
+                Finding what works for you personally is crucial. There's no one-size-fits-all approach to mental health. Explore different strategies and techniques to discover what resonates with you.
+            </p>
+            <p>
+                Share your experiences and inspire others on their own journey to mental well-being. Your insights could be the catalyst for someone else's life-changing transformation. 
+            </p>
+        </div>
+    </section>
+
+    <section class="add">
+        <button class="plus">+</button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <input type="text" id="title" placeholder="Title" maxlength="20">
+                <textarea id="content" rows="10" placeholder="max. 250 symbols" maxlength="250" oninput="updateCounter()"></textarea>
+                <span id="counter" class="counter">250 characters remaining</span>
+                <input type="text" id="author" placeholder="Author" maxlength="20">
+                <select id="tag" placeholder="Tag"></select>
+                <button id="addCardButton">Add</button>
+                <span class="close">Close</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards">
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
